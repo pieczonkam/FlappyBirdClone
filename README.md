@@ -10,7 +10,7 @@ To run the game, execute following command:
 ```
 python3 main.py
 ```
-The game can also be built as a single file executable, using Pyinstaller (requires changing paths in main.spec file):
+The game can also be built as a single file executable, using Pyinstaller (requires changing paths in ```main.spec``` file):
 ```
 pyinstaller main.spec
 ```
