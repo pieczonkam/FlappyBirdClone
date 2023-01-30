@@ -31,11 +31,11 @@ class Game:
 
     def resetValues(self):
         self.score = 0
-        with open(Settings.HIGHSCORE_FILE, 'r') as f:
-            try:
+        try:
+            with open(Settings.HIGHSCORE_FILE, 'r') as f:
                 self.highscore = int(f.read())
-            except Exception:
-                self.highscore = 0
+        except Exception:
+            self.highscore = 0
         
         self.sky = Background(0, 0, utils.resourcePath('Graphics/sky.png'), self.screen)
         self.ground = Background(0, Settings.GROUND_LEVEL, utils.resourcePath('Graphics/ground.png'), self.screen)
@@ -68,10 +68,10 @@ class Game:
             delta_time = self.clock.tick(Settings.FRAMERATE) * 0.01
 
             # Fps counter
-            # fps_counter -= 1
-            # if fps_counter == 0:
-            #     fps_counter = Settings.FRAMERATE
-            #     print(round(self.clock.get_fps()))
+            fps_counter -= 1
+            if fps_counter == 0:
+                fps_counter = Settings.FRAMERATE
+                print(round(self.clock.get_fps()))
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -134,9 +134,12 @@ class Game:
                         pygame.mixer.Sound.play(self.sounds['die'])
                         self.game_over = True
                         if self.score > self.highscore:
-                            with open(Settings.HIGHSCORE_FILE, 'w') as f:
-                                f.write(str(self.score))
-                            self.new_highscore = True
+                            try:
+                                with open(Settings.HIGHSCORE_FILE, 'w') as f:
+                                    f.write(str(self.score))
+                                self.new_highscore = True
+                            except Exception:
+                                pass
                 else:
                     # Moving bg
                     self.sky.moveX(delta_time * 100)
