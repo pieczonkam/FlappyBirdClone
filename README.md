@@ -1,7 +1,8 @@
 # FlappyBirdClone
 
-### A Flappy Bird clone game made with Python and Pygame library
+A Flappy Bird clone made with Python and Pygame library
 
+## Setup
 To install necessary dependencies, run command:
 ```
 pip install -r requirements.txt
