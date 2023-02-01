@@ -18,9 +18,9 @@ pyinstaller main.spec
 
 ## Screenshots
 <p float="left">
-  <img src="/screenshots/menu.jpg" width="500" height="350" />
+  <img src="/screenshots/menu.jpg" width="480" height="320" />
   &nbsp;&nbsp;
-  <img src="/screenshots/gameplay.jpg" width="500" height="350" />
+  <img src="/screenshots/gameplay.jpg" width="480" height="320" />
   <br/>
-  <img src="/screenshots/game_over.jpg" width="500" height="350" />
+  <img src="/screenshots/game_over.jpg" width="480" height="320" />
 </p>
