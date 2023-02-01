@@ -21,6 +21,6 @@ pyinstaller main.spec
   <img src="/screenshots/menu.jpg" width="480" height="320" />
   &nbsp;&nbsp;
   <img src="/screenshots/gameplay.jpg" width="480" height="320" />
-  <br/>
+  <br/><br/>
   <img src="/screenshots/game_over.jpg" width="480" height="320" />
 </p>
